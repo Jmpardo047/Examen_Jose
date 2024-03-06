@@ -1,4 +1,21 @@
 {
-    "Empleados": {},
-    "colillas de pago": {}
+    "empleados": {
+        "123": {
+            "id": "123",
+            "nombre": "jose",
+            "cargo": "Gerente",
+            "salario": 107500.0
+        }
+    },
+    "colillas": {
+        "123": {
+            "mes": "enero",
+            "fecha": "enero 3",
+            "sueldo base": 62000.0,
+            "pago horas extra": 49500,
+            "cuota prestamo": 2000.0,
+            "descuento cafeteria": 2000.0,
+            "total": 107500.0
+        }
+    }
 }
