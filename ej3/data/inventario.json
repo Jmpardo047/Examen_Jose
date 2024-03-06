@@ -1,0 +1,9 @@
+{
+    "123": {
+        "id": 123,
+        "nombre": "a",
+        "valor unitario": 123.0,
+        "stock minimo": 123,
+        "stock maximo": 1
+    }
+}
