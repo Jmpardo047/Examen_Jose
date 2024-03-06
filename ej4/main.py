@@ -10,7 +10,7 @@ if __name__ == '__main__':
         def Excecute(func):
             func
             MainMenu()
-        menu =[['1.', 'Registrar info de empleado'], ['2.', 'Calcular valor a pagar a empleado'], ['3.', 'Salir']]
+        menu =[['1.', 'Registrar info de empleado'], ['2.', 'Calcular valor a pagar a empleado'], ['3.', 'consultar'], ['4.', 'Salir']]
         c.os.system('cls')
         print(tabulate(menu, tablefmt='grid'))
         op = input('\n)..'  )
@@ -21,6 +21,9 @@ if __name__ == '__main__':
             c.os.system('cls')
             Excecute(emp.RegSalario(empleados,colillas))
         elif (op == '3'):
+            c.os.system('cls')
+            Excecute(emp.Consultar(empleados,colillas))
+        elif (op == '4'):
             finalUpdate = {
                 'empleados':empleados,
                 'colillas':colillas

@@ -1,4 +1,5 @@
 import modules.corefiles as c
+import json
 def AddEmpleado(empleados:dict):
     print('---- AGREGAR INFORMMACIÓN DE EMPLEADO ----')
     print('Ingrese el id del empleado')
@@ -81,3 +82,29 @@ def ValidEmp(empleados:dict):
     else:
         print('El id de empleado ingresado no se encuentra registrado')
         c.os.system('pause')
+
+def Consultar(empleados:dict,colillas:dict):
+    c.os.system('cls')
+    print('1.Consultar total pagado a un empleado\n2. Consultar colillas de pago')
+    op = c.Validstr()
+    if (op == '1'):
+        print('ingrese el id del empleado al cual le quiere consultar el total pagado')
+        id = ValidEmp(empleados)
+        if (bool(id) == True):
+            salario = colillas[id]['total']
+            print(f'El total pagado a este empleado fue {salario}')
+            c.os.system('pause')
+        else:
+            pass
+    elif (op == '2'):
+        print('ingrese el id del empleado al cual le quiere consultar su colilla de pago')
+        id = ValidEmp(empleados)
+        if (bool(id) == True):
+            colilla = colillas.get(id)
+            printer = json.dumps(colilla,indent=4)
+            print(printer)
+            c.os.system('pause')
+        else:
+            pass
+    else:
+        pass
